@@ -1,0 +1,30 @@
+<head>
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="./jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> 
+$(function(){
+	let worker = new Worker('js/worker.js');
+	// 在主线程中发送消息给 Web Worker
+	worker.postMessage(data);
+
+	// 在主线程中接收 Web Worker 发送的消息
+	worker.onmessage = function(event) {
+	  let result = event.data;
+	  console.log(result);
+	  // 处理 Web Worker 返回的结果
+	  // ...
+	};
+});
+
+</script> 
+
+</head>
+
+<body>
+	<a href="javascript:void;" onclick="toMan()"> 点击我</a>
+                   
+                                
+</body>

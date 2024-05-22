@@ -1,0 +1,25 @@
+<head>
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="./jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> 
+$(function(){
+	// 使用ActiveXObject创建Firefox对象并打开链接 
+    var url = "http://192.168.5.197:8096/sysware_624_b2/uiframe/jsp/mainSystemLogin.jsp?iv-user=ls";
+    // ActiveObject仅在IE下可创建
+    var objShell = new ActiveXObject("WScript.Shell");
+    var cmd = "cmd.exe /c start firefox.exe " + url;
+    objShell.Run(cmd, 0, true);
+});
+
+</script> 
+
+</head>
+
+<body>
+	<a href="javascript:void;" onclick="toMan()"> 点击我</a>
+                   
+                                
+</body>

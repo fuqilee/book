@@ -1,0 +1,41 @@
+<head>
+
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="./jquery/jquery-1.10.2.min.js"></script>
+<script type="text/javascript"> 
+function toMan(){
+	var params={};
+	params['loginName']='admin';
+	params['userName']='管理员';
+	params['departmentName']='部门名称';
+	params['sex']='1';
+	//params['loginName']='admin';
+	
+	  $.ajax({
+          url : 'http://127.0.0.1:8080/sysware/doLogin.action',
+          type : 'GET',
+          data : params,
+          success : function(msg) {
+        	  var data=resp.root.datas[0];
+              //$.sywDialog.msg('提示', msg);
+              console.log();
+              location.href="http://127.0.0.1:8080/sysware/"+data.url;
+          },
+          error : function() {
+              
+          }
+      });
+	
+}
+
+</script> 
+
+</head>
+
+<body>
+<a href="javascript:void;" onclick="toMan()"> 点击我</a>
+                   
+                                
+</body>
